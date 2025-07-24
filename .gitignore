@@ -1,0 +1,6 @@
+# Logs
+logs
+*.log
+static
+__debug_bin*
+testdb
