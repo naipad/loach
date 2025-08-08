@@ -84,6 +84,7 @@ func Open(dbPath string, o *opt.Options) (*DB, error) {
 
 func OpenDefault(dbPath string) (*DB, error) {
 	o := &opt.Options{
+		BlockCacheCapacity: 64 * 1024 * 1024,
 		Filter: filter.NewBloomFilter(10),
 	}
 	database, err := leveldb.OpenFile(dbPath, o)
